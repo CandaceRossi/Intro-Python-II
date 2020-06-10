@@ -7,7 +7,7 @@ room = {
     yard. Just North of you lies the lit up skyline, the electirc city fun beckons"""),
 
     'kitchen':    Room("Kitchen", """Under a dim light a plate stacked with delicious donuts
-    catches your sight. Have a treat but not too many! An overhead surround sound plays Dilla
+    catches your sight. Have a treat! An overhead surround sound plays Dilla
     which gets louder heading north and east toward a windy breeze."""),
 
     'balcony': Room("Grand Overlook", """A highrise view of the amazing skyline appears before you. 
