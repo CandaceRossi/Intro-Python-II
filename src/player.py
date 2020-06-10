@@ -4,27 +4,43 @@
 from room import Room
 
 class Player:
+    def__init__(self, name, attributes, is_man=False):
+        self.name = name
+        self.attributes = attributes
+        self.rooms = rooms
+        self.is_man = is_man
+#  def __str__(self):
+#         #return a string representing the store
+#         output = f"Welcome to {self.name}!"
+#         i = 1
+#         for attribute in self.attributes:
+#             output += f'\n {i}{str(attribute.name)}'
+#             i += 1
+#         return output
+#         return f"Welcome to {self.name}: Here are the attributes" {self.attributes}"
+
+class Renee(Player):
     def__init__(self, name, attributes):
         self.name = name
         self.attributes = attributes
         self.rooms = rooms
 
-    def __str__(self):
-        #return a string representing the store
-        output = f"Welcome to {self.name}!"
-        i = 1
-        for attribute in self.attributes:
-            output += f'\n {i}{str(attribute.name)}'
-            i += 1
-        return output
-        return f"Welcome to {self.name}: Here are the attributes" {self.attributes}"
+class Ashley(Player):
+    def__init__(self, name, attributes):
+        self.name = name
+        self.attributes = attributes
+        self.rooms = rooms
 
-    def __repr__(self):
-    #also returns a string
-    return f"self.name = {self.name} ; self.attributes = 
+class Alex(Player):
+    def__init__(self, name, attributes):
+        super().__init__(name, is_man=True)
+        self.name = name
+        self.attributes = attributes
+        self.rooms = rooms
 
-outside_room = Room("Running", "All your running needs", [])
-kitchen_room = Room("Baseball", "Blue Jays fans only", [])
-balcony_room = Room("Basketball", "Indoor and outdoor products", [])
-tacos_room = Room("Football", "The American kind", [])
-party_room = Room("Football", "The American kind", [])
+class Candace(Player):
+    def__init__(self, name, attributes):
+        self.name = name
+        self.attributes = attributes
+        self.rooms = rooms
+

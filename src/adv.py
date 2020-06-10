@@ -11,13 +11,13 @@ room = {
     which gets louder heading north and east toward a windy breeze."""),
 
     'balcony': Room("Grand Overlook", """A highrise view of the amazing skyline appears before you. 
-    Ahead to the north, a smell of delicious mexican cuisine permiates the air and the fire stove oven
-    wafts a smoke signal in the distance."""),
+    Have a seat to take it all in. Ahead to the north, a smell of delicious mexican cuisine 
+    permiates the air and the fire stove oven wafts a smoke signal in the distance."""),
 
     'tacos':   Room("Taco Hut", """The smell of delicious mexican cuisine at it's finest!
     After your energy is filled, head west to north and follow the sounds in the distance."""),
 
-    'party': Room("Kwest-on's Party", """You've found Dj Kwest-on's amazing 
+    'party': Room("Wolf Pack Party", """You've found Dj Kwest-on's amazing 
     Dance Party where all your friends are dancing! To get to the after party you have
     to dance it up! Use a combination of all directions to really groove. 
     Hint: South is really gettin down """),

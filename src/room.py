@@ -7,8 +7,8 @@ class Room:
         self.description = description
     def __str__(self):
         return f"{self.name}: {self.description}"
-    def __repr__(self):
-        return f"self.name = {self.name} ; self.attributes = 
+    # def __repr__(self):
+    #     return f"self.name = {self.name} ; self.attributes = 
 
 #outside_room = Room("", "", [])
 #kitchen_room = Room("", "", [])
