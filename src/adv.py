@@ -3,35 +3,37 @@ from room import Room
 # Declare all the rooms
 
 room = {
-    'outside':  Room("Outside Cave Entrance",
-                     "North of you, the cave mount beckons"),
+    'outside':  Room("Outside Backyard", """A barbeque grill sits in the center of a well groomed 
+    yard. Just North of you lies the lit up skyline, the electirc city fun beckons"""),
 
-    'foyer':    Room("Foyer", """Dim light filters in from the south. Dusty
-passages run north and east."""),
+    'kitchen':    Room("Kitchen", """Under a dim light a plate stacked with delicious donuts
+    catches your sight. Have a treat but not too many! An overhead surround sound plays Dilla
+    which gets louder heading north and east toward a windy breeze."""),
 
-    'overlook': Room("Grand Overlook", """A steep cliff appears before you, falling
-into the darkness. Ahead to the north, a light flickers in
-the distance, but there is no way across the chasm."""),
+    'balcony': Room("Grand Overlook", """A highrise view of the amazing skyline appears before you. 
+    Ahead to the north, a smell of delicious mexican cuisine permiates the air and the fire stove oven
+    wafts a smoke signal in the distance."""),
 
-    'narrow':   Room("Narrow Passage", """The narrow passage bends here from west
-to north. The smell of gold permeates the air."""),
+    'tacos':   Room("Taco Hut", """The smell of delicious mexican cuisine at it's finest!
+    After your energy is filled, head west to north and follow the sounds in the distance."""),
 
-    'treasure': Room("Treasure Chamber", """You've found the long-lost treasure
-chamber! Sadly, it has already been completely emptied by
-earlier adventurers. The only exit is to the south."""),
+    'party': Room("Kwest-on's Party", """You've found Dj Kwest-on's amazing 
+    Dance Party where all your friends are dancing! To get to the after party you have
+    to dance it up! Use a combination of all directions to really groove. 
+    Hint: South is really gettin down """),
 }
 
 
 # Link rooms together
 
-room['outside'].n_to = room['foyer']
-room['foyer'].s_to = room['outside']
-room['foyer'].n_to = room['overlook']
-room['foyer'].e_to = room['narrow']
-room['overlook'].s_to = room['foyer']
-room['narrow'].w_to = room['foyer']
-room['narrow'].n_to = room['treasure']
-room['treasure'].s_to = room['narrow']
+room['outside'].n_to = room['kitchen']
+room['kitchen'].s_to = room['outside']
+room['kitchen'].n_to = room['balcony']
+room['kitchen'].e_to = room['tacos']
+room['balcony'].s_to = room['kitchen']
+room['tacos'].w_to = room['kitchen']
+room['tacos'].n_to = room['party']
+room['party'].s_to = room['tacos']
 
 #
 # Main
@@ -44,7 +46,7 @@ room['treasure'].s_to = room['narrow']
 # * Prints the current room name
 # * Prints the current description (the textwrap module might be useful here).
 # * Waits for user input and decides what to do.
-#
+#user = int(input("[n] North  [s] South  [e] East  [w] West  [9] Quit"))
 # If the user enters a cardinal direction, attempt to move to the room there.
 # Print an error message if the movement isn't allowed.
 #
