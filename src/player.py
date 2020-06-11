@@ -4,7 +4,7 @@
 from room import Room
 
 class Player:
-    def__init__(self, name, attributes, hunger, eat, is_man=False):
+    def __init__(self, name, attributes, hunger, eat, is_man=False):
         self.name = name
         self.attributes = attributes
         self.rooms = rooms
@@ -26,26 +26,26 @@ class Player:
 #         return f"Welcome to {self.name}: Here are the attributes" {self.attributes}"
 
 class Renee(Player):
-    def__init__(self, name, attributes, hunger, eat):
-    super().__init__( name, attributes, hunger, eat)
+    def __init__(self, name, attributes, hunger, eat):
+        super().__init__( name, attributes, hunger, eat)
     # self.donutexcitement = donutexcitement
 
     def donutexcitement(self, donut):
         if donut == 1:
             print("Donuts are the best meal of the day. Not up for debate!")
 class Ashley(Player):
-    def__init__(self, name, attributes, hunger, eat):
+    def __init__(self, name, attributes, hunger, eat):
     super().__init__( name, attributes, hunger, eat)
        
 
 class Alex(Player):
-    def__init__(self, name, attributes, hunger, eat):
+    def __init__(self, name, attributes, hunger, eat):
     super().__init__(name, attributes, hunger, eat, is_man=True)
     # self.donutexcitement = donutexcitement   
     def donutexcitement(self, donut):
         if donut == 1:
             print("Donuts like the late great Dilla. Let's do this!")
 class Candace(Player):
-    def__init__(self, name, attributes, hunger, eat):
+    def __init__(self, name, attributes, hunger, eat):
     super().__init__( name, attributes, hunger, eat)   
 
