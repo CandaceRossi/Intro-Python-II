@@ -1,13 +1,18 @@
 # Write a class to hold player information, e.g. what room they are in
 # currently.
-
+from room import Room
 
 class Player:
-    def __init__(self, name, current_room=None):
+    def __init__(self, name, current_room, items=[]):
         self.name = name
         self.current_room = current_room
+        self.items = list(items)
 
-
+    # def __str__(self, item, room):
+    def get_item(self, item, room):
+        items = Items(self, room)
+        self.room.append(items)
+        #output= f"{self.name} is in {self.room.name} with {self.item[i].name}
 
         # , donut_hunger, taco_hunger
         # self.donut_hunger = donut_hunger
@@ -19,10 +24,3 @@ class Player:
 
     # def eat(self, food_item):
     #     if food_item == taco
-
-# renee_player = Player("Renee", 35, 10)
-# ashley_player = Player("Ashley", 8, 12)
-# alex_player = Player("Alex", 30, 17)
-# candace_player = Player("Candace", 12, 16)
-
-# print(renee_player)

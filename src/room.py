@@ -1,16 +1,16 @@
 # Implement a class to hold room information. This should have name and
 # description attributes.
-
+from items import Items
 
 class Room:
-    def __init__(self, name, description, s_to, e_to, w_to, n_to):
+    def __init__(self, name, description, items=None):
         self.name = name
         self.description = description
         self.s_to = None
         self.e_to = None
         self.w_to = None
         self.n_to = None
-        # self.item = item  , item
+        self.items = items
 
     def __str__(self):
         output = '{self.name): {self.description}\n'
@@ -24,6 +24,12 @@ class Room:
             output += 'To the north is: ' + self.n_to.name + '\n'
             
         return output
+
+    def add_item(self, item):
+        if item is None:
+            items = []
+        items.append(item)
+        return items
 
     # def start_room():
     #     start_room_options = ["outside", "kitchen", "balcony", "tacos", "party"]
