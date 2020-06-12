@@ -1,51 +1,28 @@
 # Write a class to hold player information, e.g. what room they are in
 # currently.
 
-from room import Room
 
 class Player:
-    def __init__(self, name, attributes, hunger, eat, is_man=False):
+    def __init__(self, name, current_room=None):
         self.name = name
-        self.attributes = attributes
-        self.rooms = rooms
-        self.hunger = hunger
-        self.eat = eat
-        self.is_man = is_man
-    def eat(self, food):
-        if food > 0 and hunger < 25:
-            hunger += food
+        self.current_room = current_room
 
-#  def __str__(self):
-#         #return a string representing the store
-#         output = f"Welcome to {self.name}!"
-#         i = 1
-#         for attribute in self.attributes:
-#             output += f'\n {i}{str(attribute.name)}'
-#             i += 1
-#         return output
-#         return f"Welcome to {self.name}: Here are the attributes" {self.attributes}"
 
-class Renee(Player):
-    def __init__(self, name, attributes, hunger, eat):
-        super().__init__( name, attributes, hunger, eat)
-    # self.donutexcitement = donutexcitement
 
-    def donutexcitement(self, donut):
-        if donut == 1:
-            print("Donuts are the best meal of the day. Not up for debate!")
-class Ashley(Player):
-    def __init__(self, name, attributes, hunger, eat):
-    super().__init__( name, attributes, hunger, eat)
-       
+        # , donut_hunger, taco_hunger
+        # self.donut_hunger = donut_hunger
+        # self.taco_hunger = taco_hunger
+    
 
-class Alex(Player):
-    def __init__(self, name, attributes, hunger, eat):
-    super().__init__(name, attributes, hunger, eat, is_man=True)
-    # self.donutexcitement = donutexcitement   
-    def donutexcitement(self, donut):
-        if donut == 1:
-            print("Donuts like the late great Dilla. Let's do this!")
-class Candace(Player):
-    def __init__(self, name, attributes, hunger, eat):
-    super().__init__( name, attributes, hunger, eat)   
+    # def __str__(self)
+    #     output = f""  
 
+    # def eat(self, food_item):
+    #     if food_item == taco
+
+# renee_player = Player("Renee", 35, 10)
+# ashley_player = Player("Ashley", 8, 12)
+# alex_player = Player("Alex", 30, 17)
+# candace_player = Player("Candace", 12, 16)
+
+# print(renee_player)

@@ -1,17 +1,29 @@
 # Implement a class to hold room information. This should have name and
 # description attributes.
 
+
 class Room:
-    def__init__(self, name, description):
+    def __init__(self, name, description, s_to, e_to, w_to, n_to):
         self.name = name
         self.description = description
-    def __str__(self):
-        return f"{self.name}: {self.description}"
-    # def __repr__(self):
-    #     return f"self.name = {self.name} ; self.attributes = 
+        self.s_to = None
+        self.e_to = None
+        self.w_to = None
+        self.n_to = None
+        # self.item = item  , item
 
-#outside_room = Room("", "", [])
-#kitchen_room = Room("", "", [])
-#balcony_room = Room("", "", [])
-#tacos_room = Room("", "", [])
-#party_room = Room("", "", [])
+    def __str__(self):
+        output = '{self.name): {self.description}\n'
+        if self.s_to:
+            output += 'To the south is: ' + self.s_to.name + '\n'
+        if self.e_to:
+            output += 'To the east is: ' + self.e_to.name + '\n'
+        if self.w_to:
+            output += 'To the west is: ' + self.w_to.name + '\n'
+        if self.n_to:
+            output += 'To the north is: ' + self.n_to.name + '\n'
+            
+        return output
+
+    # def start_room():
+    #     start_room_options = ["outside", "kitchen", "balcony", "tacos", "party"]
